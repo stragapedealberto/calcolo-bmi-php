@@ -47,7 +47,7 @@
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         
         /* Margini richiesti: top 175px, bottom 114px, sx/dx 60px con auto per centratura */
-        margin-top: 175px;
+        margin-top: 0px;
         margin-bottom: 114px;
         margin-left: auto;
         margin-right: auto;
@@ -68,7 +68,7 @@
         .rigaForm label {
         font-size: 0.9rem;
         font-weight: 600;
-        color: #484F58;
+        color: #000000;
         }
 
         /* Tag <input> con altezza di 44px */
@@ -114,6 +114,7 @@
         transform: scale(0.99);
         }
 
+        /*risultato in più*/
         /* Box del risultato dell'IMC */
         .risultato-container {
         margin-top: 20px;
@@ -158,7 +159,7 @@
 </head>
 <body>
     <main>
-        <h1 class="title">Calcolatore BMI</h1>
+        <h1>Calcolatore BMI</h1>
 
         <div class="card">
 
@@ -179,19 +180,13 @@
                     <input type="text" name="altezza" id="altezza" required>
                 </div>
 
-                <div class="rigaForm">
-                    <input type="submit" name="calcola" value="Calcola">
-                </div>
-
-
-
+                <!--puoi usare button-->
+                <input type="submit" name="calcola" value="Calcola" class="btn-calcola">
+                
             </form>
 
         </div>
     </main>
-
-
-
 
 </body>
 </html>
