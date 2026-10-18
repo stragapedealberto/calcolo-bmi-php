@@ -7,6 +7,7 @@ seguenti:
 - sottopeso;
 - normopeso;
 - sovrappeso;
-- obesità;
+- obesità.
+
 Una volta associato il BMI alla fascia di appartenenza, viene restituito una card con il nome della persona, il suo peso e la sua altezza,
 il suo BMI e la fascia a cui appartiene.
