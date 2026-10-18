@@ -1,0 +1,46 @@
+Di seguito si allega il prompt fornito a Gemini per la generazione del layout del file index.html.
+
+Implementa un layout contenente una card centrata verticalmente e orizzontalmente con 60px di margine sx e dx, 
+175px di margine superiore- e 114px di margine inferiore. 
+Lo sfondo della card deve essere bianco; la card deve essere larga 360px, deve avere un padding di 24px su tutti i lati,
+i bordi devono avere un arrotondamento di 12px e deve avere un'ombreggiatura leggera grigia. 
+All'interno della card è presente un form i cui campi sono: "Nome", "Peso (kg)" e "Altezza (cm)"; è presente anche
+il pulsante "Calcola". Ciascuno di questi tre campi è contenuto in un div di classe "rigaForm"; questa classe CSS
+è contraddistinta da un padding di 0px e la distanza tra la label e il tag input è di 6px. Il tag input 
+ha un'altezza di 44px. Il margine inferiore della classe "rigaForm" è di 16px (margin top, left e right di 0px).
+Il pulsante deve avere uno sfondo di colore #1F2328, testo bianco centrato verticalmente e orizzontalmente, 
+angoli arrotondati di 8px, larghezza piena. 
+Il pulsante deve avere un margine superiore di 24px.
+Il tag h1 deve essere centrato verticalmente e orizzontalmente. il margine superiore è di 114px, quello dx e sx di 135px
+e quello inferiore di 24 px. Lo sfondo della pagina deve essere di colore #F1F3F5 e il testo deve essere sans-serif.
+Tutto il contenuto deve essere centrato.
+
+Di seguito si allega il prompt fornito a Gemini per la generazione del layout della pagina di risposta.
+
+Implementa un layout contenente una card centrata verticalmente e orizzontalmente, con margine
+superiore e inferiore di 24px e margine sx e dx di 60px. bordo di 3px con un arrotondamento di 12px.
+
+
+All'interno della card si trova il tag h3 (identifica il nome), che deve essere centrato orizzontalmente e verticalmente, 
+con un margine superiore di 27px, un margine inferiore di 8px.
+subito dopo il tag h3 c'è un paragrafo allinato orizzontalmente e verticalmente, con margine superiore pari a 0px,
+margine inferiore di 16px. subito dopo il paragrafo si trova un testo allineato orizzontalmente e verticalmente
+con margin: 99px 115px 16px 115px e di grandezza 48px.
+Subito dopo il testo c'è un altro tag h3, che indica la fascia BMI, centrato orizzontalmente e verticalmente con margine inferiore
+di 27px.
+Per il primo tag h3 realizza un id titolo, mentre per il secondo tag le indicazioni sono contenute successivamente.
+Le impostazioni riferite alla card descritte in precedenza sono generali, poiché ci sono quattro
+sottoclassi CSS, che differiscono per il colore del bordo e del secondo h3, che coincidono;
+per lo sfondo. Nel seguente elenco scritta fa riferimento al secondo tag h3.
+- classe "sottopeso": sfondo: #E3EEF9; bordo e scritta: #2F6FB3.
+- classe "normopeso": sfondo: #E3F4E6; bordo e scritta: #256D34.
+- classe sovrappeso": sfondo: #FCEBD7; bordo e scritta: #9A4F06.
+- classe "obesita": sfondo: #FBE2E2; bordo e scritta: #B32D2D.
+
+
+subito sotto la card c'è un link con scritto "Calcola di nuovo" che deve avere essere centrato
+verticalmente e orizzontalmente con margin: 0px 185px 161px 185px
+Lo sfondo della pagina deve essere di colore #F1F3F5 e il testo deve essere sans-serif.
+Tutto il contenuto deve essere centrato. 
+Il tag h1 deve essere centrato verticalmente e orizzontalmente.
+il margine superiore è di 161px, quello sx e dx di 175px e quello inferiore di 0px
