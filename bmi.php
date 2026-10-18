@@ -167,9 +167,7 @@
 
         $bmi = round($bmi, 2);
 
-        if($bmi < 0){
-            echo "ERRORE";
-        }elseif($bmi<18.5){
+        if($bmi<18.5){
             $classe = "sottopeso";
             $fascia = "SOTTOPESO";
         }elseif($bmi>18.5 && $bmi<24.9){
