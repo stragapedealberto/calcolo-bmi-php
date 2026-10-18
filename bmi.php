@@ -163,11 +163,7 @@
         $peso = _POST["peso"];
         $altezza = _POST["altezza"];
 
-
-
-
-
-
+        $bmi = $peso / pow(($altezza / 100), 2);
 
 
 
