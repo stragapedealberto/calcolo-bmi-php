@@ -4,8 +4,201 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        /* Reset base e Font sans-serif */
+        * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        }
+
+        /* Sfondo della pagina e centratura generale */
+        body {
+        background-color: #F1F3F5;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        color: #1F2328;
+        }
+
+        /* Tag h1 */
+        h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 161px 175px 0px 175px;
+        font-size: 2rem;
+        font-weight: 700;
+        }
+
+        /* Struttura principale della Card generale */
+        .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 24px 60px;
+        border-style: solid;
+        border-width: 3px;
+        border-radius: 12px;
+        width: fit-content;
+        }
+
+        /* Primo tag h3 con id "titolo" */
+        #titolo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 27px;
+        margin-bottom: 8px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.25rem;
+        font-weight: 600;
+        }
+
+        /* Paragrafo subito dopo il primo h3 */
+        .card p.descrizione {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 16px;
+        color: #484F58;
+        font-size: 1rem;
+        }
+
+        /* Testo valore BMI subito dopo il paragrafo */
+        .valore-bmi {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 99px 115px 16px 115px;
+        font-size: 48px;
+        font-weight: bold;
+        line-height: 1;
+        }
+
+        /* Secondo tag h3 (Fascia BMI) */
+        .card h3.fascia-bmi {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 27px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        }
+
+        /* --- SOTTOCLASSI CARD --- */
+
+        /* 1. Classe "sottopeso" */
+        .card.sottopeso {
+        background-color: #E3EEF9;
+        border-color: #2F6FB3;
+        }
+        .card.sottopeso h3.fascia-bmi {
+        color: #2F6FB3;
+        }
+
+        /* 2. Classe "normopeso" */
+        .card.normopeso {
+        background-color: #E3F4E6;
+        border-color: #256D34;
+        }
+        .card.normopeso h3.fascia-bmi {
+        color: #256D34;
+        }
+
+        /* 3. Classe "sovrappeso" */
+        .card.sovrappeso {
+        background-color: #FCEBD7;
+        border-color: #9A4F06;
+        }
+        .card.sovrappeso h3.fascia-bmi {
+        color: #9A4F06;
+        }
+
+        /* 4. Classe "obesita" */
+        .card.obesita {
+        background-color: #FBE2E2;
+        border-color: #B32D2D;
+        }
+        .card.obesita h3.fascia-bmi {
+        color: #B32D2D;
+        }
+
+        /* Link subito sotto la card */
+        .link-ricalcola {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0px 185px 161px 185px;
+        color: #0969DA;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        }
+
+        .link-ricalcola:hover {
+        text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
+
+    <!-- Tag h1 -->
+    <h1>Risultato IMC</h1>
+
+    <!-- Contenitore delle Card con le rispettive sottoclassi -->
+    <div class="card-container">
+
+        <!-- 1. Variante NORMOPESO -->
+        <div class="card normopeso">
+        <h3 id="titolo">Mario Rossi</h3>
+        <p class="descrizione">Il tuo indice di massa corporea è</p>
+        <div class="valore-bmi">22.4</div>
+        <h3 class="fascia-bmi">Normopeso</h3>
+        </div>
+
+        <!-- 2. Variante SOTTOPESO -->
+        <div class="card sottopeso">
+        <h3 id="titolo">Mario Rossi</h3>
+        <p class="descrizione">Il tuo indice di massa corporea è</p>
+        <div class="valore-bmi">17.2</div>
+        <h3 class="fascia-bmi">Sottopeso</h3>
+        </div>
+
+        <!-- 3. Variante SOVRAPPESO -->
+        <div class="card sovrappeso">
+        <h3 id="titolo">Mario Rossi</h3>
+        <p class="descrizione">Il tuo indice di massa corporea è</p>
+        <div class="valore-bmi">27.8</div>
+        <h3 class="fascia-bmi">Sovrappeso</h3>
+        </div>
+
+        <!-- 4. Variante OBESITA -->
+        <div class="card obesita">
+        <h3 id="titolo">Mario Rossi</h3>
+        <p class="descrizione">Il tuo indice di massa corporea è</p>
+        <div class="valore-bmi">32.1</div>
+        <h3 class="fascia-bmi">Obesità</h3>
+        </div>
+
+    </div>
+
+    <!-- Link sotto la card -->
+    <a href="#" class="link-ricalcola">Calcola di nuovo</a>
     
 </body>
 </html>
