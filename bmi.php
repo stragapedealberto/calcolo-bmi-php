@@ -159,58 +159,40 @@
 
     <?php
 
-        $nome = _POST["nome"];
-        $peso = _POST["peso"];
-        $altezza = _POST["altezza"];
+        $nome = $_POST["nome"];
+        $peso = $_POST["peso"];
+        $altezza = $_POST["altezza"];
 
         $bmi = $peso / pow(($altezza / 100), 2);
 
+        $bmi = round($bmi, 2);
 
-
-
-
-
-
-
-
-
+        if($bmi < 0){
+            echo "ERRORE";
+        }elseif($bmi<18.5){
+            $classe = "sottopeso";
+            $fascia = "SOTTOPESO";
+        }elseif($bmi>18.5 && $bmi<24.9){
+            $classe = "normopeso";
+            $fascia = "NORMOPESO";
+        }elseif($bmi>25 && $bmi<29.9){
+            $classe = "sovrappeso";
+            $fascia = "SOVRAPPESO";
+        }elseif($bmi>30){
+            $classe = "obesita";
+            $fascia = "OBESITÀ";
+        }
     ?>
 
     <h1>Il tuo BMI</h1>
 
-    <!-- Contenitore delle Card con le rispettive sottoclassi -->
     <div class="card-container">
 
-        <!-- 1. Variante NORMOPESO -->
-        <div class="card normopeso">
-        <h3 id="titolo">Mario Rossi</h3>
-        <p class="descrizione">Il tuo indice di massa corporea è</p>
-        <div class="valore-bmi">22.4</div>
-        <h3 class="fascia-bmi">Normopeso</h3>
-        </div>
-
-        <!-- 2. Variante SOTTOPESO -->
-        <div class="card sottopeso">
-        <h3 id="titolo">Mario Rossi</h3>
-        <p class="descrizione">Il tuo indice di massa corporea è</p>
-        <div class="valore-bmi">17.2</div>
-        <h3 class="fascia-bmi">Sottopeso</h3>
-        </div>
-
-        <!-- 3. Variante SOVRAPPESO -->
-        <div class="card sovrappeso">
-        <h3 id="titolo">Mario Rossi</h3>
-        <p class="descrizione">Il tuo indice di massa corporea è</p>
-        <div class="valore-bmi">27.8</div>
-        <h3 class="fascia-bmi">Sovrappeso</h3>
-        </div>
-
-        <!-- 4. Variante OBESITA -->
-        <div class="card obesita">
-        <h3 id="titolo">Mario Rossi</h3>
-        <p class="descrizione">Il tuo indice di massa corporea è</p>
-        <div class="valore-bmi">32.1</div>
-        <h3 class="fascia-bmi">Obesità</h3>
+        <div class="card <?= $classe ?>">
+        <h3 id="titolo"><?= $nome ?></h3>
+        <p class="descrizione"><?php echo "Peso " . $peso . " kg - Altezza " . $altezza . " cm" ?></p>
+        <div class="valore-bmi"><?= $bmi?></div>
+        <h3 class="fascia-bmi"><?= $fascia ?></h3>
         </div>
 
     </div>
