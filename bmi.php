@@ -157,7 +157,29 @@
 </head>
 <body>
 
-    <!-- Tag h1 -->
+    <?php
+
+        $nome = _POST["nome"];
+        $peso = _POST["peso"];
+        $altezza = _POST["altezza"];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    ?>
+
     <h1>Il tuo BMI</h1>
 
     <!-- Contenitore delle Card con le rispettive sottoclassi -->
@@ -197,7 +219,6 @@
 
     </div>
 
-    <!-- Link sotto la card -->
     <a href="index.html" class="link-ricalcola">Calcola di nuovo</a>
     
 </body>
