@@ -11,7 +11,7 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        font-family: sans-serif;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
         /* Sfondo della pagina e centratura generale */
@@ -21,17 +21,17 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         min-height: 100vh;
         color: #1F2328;
         }
 
         /* Tag h1 */
         h1 {
+        text-align: center;
         display: flex;
         align-items: center;
         justify-content: center;
-        text-align: center;
         margin: 161px 175px 0px 175px;
         font-size: 2rem;
         font-weight: 700;
@@ -60,8 +60,8 @@
         margin-bottom: 8px;
         margin-left: auto;
         margin-right: auto;
-        font-size: 1.25rem;
-        font-weight: 600;
+        font-size: 1.5rem;
+        font-weight: 700;
         }
 
         /* Paragrafo subito dopo il primo h3 */
@@ -82,7 +82,7 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        margin: 99px 115px 16px 115px;
+        margin: 0px 115px 16px 115px;
         font-size: 48px;
         font-weight: bold;
         line-height: 1;
@@ -158,7 +158,7 @@
 <body>
 
     <!-- Tag h1 -->
-    <h1>Risultato IMC</h1>
+    <h1>Il tuo BMI</h1>
 
     <!-- Contenitore delle Card con le rispettive sottoclassi -->
     <div class="card-container">
@@ -198,7 +198,7 @@
     </div>
 
     <!-- Link sotto la card -->
-    <a href="#" class="link-ricalcola">Calcola di nuovo</a>
+    <a href="index.html" class="link-ricalcola">Calcola di nuovo</a>
     
 </body>
 </html>
