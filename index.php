@@ -319,6 +319,59 @@
 </head>
 <body>
 
+
+    <?php
+
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+            if(is_null($nome)){
+
+    ?>
+        <div>ERRORE</div>
+
+    <?php
+        }elseif(is_null($peso) || $peso<2 || $peso>300){
+    ?>
+          <div>ERRORE</div>
+    
+    <?php        
+        }elseif(is_null($altezza) || $altezza<2 || $altezza>240){
+    ?>
+            
+        
+        <div>ERRORE</div>
+    
+    <?php
+    }else{
+        
+        $nome = $_POST["nome"];
+        $peso = $_POST["peso"];
+        $altezza = $_POST["altezza"];
+
+        $bmi = $peso / pow(($altezza / 100), 2);
+
+        $bmi = round($bmi, 2);
+
+        if($bmi<18.5){
+            $classe = "sottopeso";
+            $fascia = "SOTTOPESO";
+        }elseif($bmi>18.5 && $bmi<24.9){
+            $classe = "normopeso";
+            $fascia = "NORMOPESO";
+        }elseif($bmi>25 && $bmi<29.9){
+            $classe = "sovrappeso";
+            $fascia = "SOVRAPPESO";
+        }elseif($bmi>30){
+            $classe = "obesita";
+            $fascia = "OBESITÀ";
+        }
+
+    }
+   
+    ?>
+
+
+
 <?php 
     if($_SERVER["REQUEST_METHOD"] == "GET"){
 ?>
@@ -327,7 +380,7 @@
 
         <div class="card">
 
-            <form action="bmi.php" method="post">
+            <form action="index.php" method="get">
                 
                 <div class="rigaForm">
                     <label for="nome">Nome</label>
@@ -369,7 +422,7 @@
 
     </div>
 
-    <a href="index.html" class="link-ricalcola">Calcola di nuovo</a>
+    <a href="index.php" class="link-ricalcola">Calcola di nuovo</a>
 
 
 <?php
